@@ -5,19 +5,22 @@ import { RelatorioDeConsumoMensalComponent } from './pages/relatorio-de-consumo/
 import { RelatorioFinanceiroComponent } from './pages/relatorio-financeiro/relatorio-financeiro.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 
-const routes : Routes = [
-  //{path: '', redirectTo: '/relatorio-de-consumo/diario', pathMatch: 'full'},
-  {path: 'relatorio-de-consumo', children: [
-    {path: '', redirectTo: 'diario', pathMatch: 'full'},
-    {path: 'diario', component: RelatorioDeConsumoDiarioComponent},
-    {path: 'mensal', component: RelatorioDeConsumoMensalComponent}
-  ]},
-  {path: 'relatorio-financeiro', component: RelatorioFinanceiroComponent},
-  {path: 'sobre', component: SobreComponent}
+const routes: Routes = [
+  { path: '', redirectTo: '/relatorio-de-consumo/diario', pathMatch: 'full' },
+  {
+    path: 'relatorio-de-consumo',
+    children: [
+      { path: '', redirectTo: 'diario', pathMatch: 'full' },
+      { path: 'diario', component: RelatorioDeConsumoDiarioComponent },
+      { path: 'mensal', component: RelatorioDeConsumoMensalComponent },
+    ],
+  },
+  { path: 'relatorio-financeiro', component: RelatorioFinanceiroComponent },
+  { path: 'sobre', component: SobreComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
