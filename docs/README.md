@@ -14,14 +14,14 @@
 
 - Node.js
 - Angular
-- Google Chorme (unit tests run in ChromeHeadless)
+- Google Chrome (unit tests run in ChromeHeadless)
 
 ### How to run
 
 1. Clone the repository on a local directory;
 2. Inside the repository's directory open a terminal;
 3. Run `npm install` to install dependencies;
-4. Run `npm run dev` to serve the app in the development environment, `npm run local` to serve pointing to the local host, or `npm run prod` for the production environment (ideally should never be used);
+4. Run `npm run start` to serve the app in the development environment, or `npm run start:prod` for the production environment (ideally should never be used);
 5. After compiling, Node will automatically open a browser window at [http://localhost:4200/](http://localhost:4200/) (where the app is served).
 
 ## Building & deploying
