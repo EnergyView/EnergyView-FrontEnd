@@ -4,6 +4,8 @@
 
 <p>EnergyView is a research and development initiative in the burgeoning field of Digital Twins, designed to revolutionize the way we monitor and comprehend real-time energy consumption. With a distributed and intelligent approach, EnergyView provides a comprehensive and detailed view of energy consumption within an environment, enabling precise analysis and informed decision-making.</p>
 
+<img src="./images/preview.png" width=612.5>
+
 <p>This project is a product of GARSoft's ownership, do not copy or redistribute this code without granted permission.</p>
 
 ## Running
@@ -49,27 +51,29 @@ Prior to initiating any development endeavors, it is imperative to create an iss
 
 When developing, your work branch should be named following the naming pattern:
 
-* **features**: N/feat/name-of-feature
-* **fixes**: N/fix/name-of-fix
-* **refactoring**: N/refactor/name-of-refactor
+- **features**: N/feat/name-of-feature
+- **fixes**: N/fix/name-of-fix
+- **refactoring**: N/refactor/name-of-refactor
 
 Please ensure that you replace N with the issue number.
 
 ### Testing, linting & commit hooks
 
 When commiting, your code will be checked and should:
+
 1. Pass all unit tests (and those should have 100% code coverage - for further information see below).
 2. Pass all linters.
 3. Follow our adapted conventional commits pattern.
 
 You can run the pre-commit checks on-demand running the following commands:
-* To execute the pre-commit checks run `npm run pre-commit`.
-  * To execute unit tests run `npm run test`.
-    * Unit tests should aim for 100% code coverage, and the current coverage percentage will be reported every time you run the tests. You can precisely identify what your tests do not cover by opening the `index.html` file inside the `coverage` directory and navigating through the pages.
-  * To execute the linters run `npm run lint`, to execute and solve auto-fixable errors and warnings run `npm run lint-fix`.
-    * To execute the TypeScript linter run `npm run lint:ts`, to execute and solve auto-fixable errors and warnings  run `npm run lint:ts-fix`.
-    * To execute the SCSS linter run `npm run lint:scss`, to execute and solve auto-fixable errors and warnings  run `npm run lint:scss-fix`.
-    * To execute the HTML linter run `npm run lint:html`.
+
+- To execute the pre-commit checks run `npm run pre-commit`.
+  - To execute unit tests run `npm run test`.
+    - Unit tests should aim for 100% code coverage, and the current coverage percentage will be reported every time you run the tests. You can precisely identify what your tests do not cover by opening the `index.html` file inside the `coverage` directory and navigating through the pages.
+  - To execute the linters run `npm run lint`, to execute and solve auto-fixable errors and warnings run `npm run lint-fix`.
+    - To execute the TypeScript linter run `npm run lint:ts`, to execute and solve auto-fixable errors and warnings run `npm run lint:ts-fix`.
+    - To execute the SCSS linter run `npm run lint:scss`, to execute and solve auto-fixable errors and warnings run `npm run lint:scss-fix`.
+    - To execute the HTML linter run `npm run lint:html`.
 
 #### Adapted conventional commits pattern
 
@@ -81,32 +85,33 @@ When commiting, always make use of our modified conventional commit pattern to e
 
 Where:
 
-* **N**: Is the number of the aforementioned created issue.
-* **type**: Describes the purpose of the commit (e.g., feat, fix, chore, docs, style, refactor, test).
-* **message**: Is a brief, descriptive message of the change, in the imperative form.
+- **N**: Is the number of the aforementioned created issue.
+- **type**: Describes the purpose of the commit (e.g., feat, fix, chore, docs, style, refactor, test).
+- **message**: Is a brief, descriptive message of the change, in the imperative form.
 
 For example:
 
 ```
 #123 feat: add new button
 ```
+
 <p align="center">
   <img src="./images/commits.png" height="350">
 </p>
 
 The types are as follows:
 
-* **test**: Indicates any type of creation or modification of test code. Example: Creation of unit tests.
-* **feat**: Indicates the development of a new feature in the project. Example: Adding a service, functionality, endpoint, etc.
-* **refactor**: Used when there is a code refactoring that has no impact on the system's logic/business rules. Example: Code changes after a code review.
-* **style**: Employed when there are changes in code formatting and style that do not alter the system in any way. Example: Changing the style guide, switching lint conventions, fixing indentations, removing whitespace, removing comments, etc.
-* **fix**: Used when there is a correction of errors that are causing bugs in the system. Example: Applying handling for a function that is not behaving as expected and returning an error.
-* **chore**: Indicates changes in the project that do not affect the system or test files. These are development changes. Example: Changing ESLint rules, adding Prettier, adding more file extensions to .gitignore.
-* **docs**: Used when there are changes in the project's documentation. Example: Adding information to the API documentation, changing the README, etc.
-* **build**: Used to indicate changes that affect the project's build process or external dependencies. Example: Gulp, adding/removing npm dependencies, etc.
-* **perf**: Indicates a change that improved the system's performance. Example: Changing forEach to while, improving a database query, etc.
-* **ci**: Used for changes in CI (Continuous Integration) configuration files. Example: Circle, Travis, BrowserStack, etc.
-* **revert**: Indicates the reversal of a previous commit.
+- **test**: Indicates any type of creation or modification of test code. Example: Creation of unit tests.
+- **feat**: Indicates the development of a new feature in the project. Example: Adding a service, functionality, endpoint, etc.
+- **refactor**: Used when there is a code refactoring that has no impact on the system's logic/business rules. Example: Code changes after a code review.
+- **style**: Employed when there are changes in code formatting and style that do not alter the system in any way. Example: Changing the style guide, switching lint conventions, fixing indentations, removing whitespace, removing comments, etc.
+- **fix**: Used when there is a correction of errors that are causing bugs in the system. Example: Applying handling for a function that is not behaving as expected and returning an error.
+- **chore**: Indicates changes in the project that do not affect the system or test files. These are development changes. Example: Changing ESLint rules, adding Prettier, adding more file extensions to .gitignore.
+- **docs**: Used when there are changes in the project's documentation. Example: Adding information to the API documentation, changing the README, etc.
+- **build**: Used to indicate changes that affect the project's build process or external dependencies. Example: Gulp, adding/removing npm dependencies, etc.
+- **perf**: Indicates a change that improved the system's performance. Example: Changing forEach to while, improving a database query, etc.
+- **ci**: Used for changes in CI (Continuous Integration) configuration files. Example: Circle, Travis, BrowserStack, etc.
+- **revert**: Indicates the reversal of a previous commit.
 
 ### Pull Request (PR)
 
@@ -138,6 +143,6 @@ Someone else should review and approve the code. After approval, you can merge t
 2. Create a branch for your work following the naming pattern.
 3. Make your changes in the branch, following the conventional commit format for your commits.
 4. When you are ready to merge your changes, create a PR from your branch to the appropriate target branch (e.g., main).
-4. In the PR description, add "Closes #N" to link the PR to the issue and summarize your changes. Replace N with the issue number.
-5. Review and discuss the changes in the PR.
-6. Once the PR is approved, merge it into the target branch.
+5. In the PR description, add "Closes #N" to link the PR to the issue and summarize your changes. Replace N with the issue number.
+6. Review and discuss the changes in the PR.
+7. Once the PR is approved, merge it into the target branch.

@@ -1,7 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { DataService } from './data.service';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { environment } from 'src/environments/environment';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 
 describe('DataService', () => {
   let service: DataService;
@@ -31,7 +33,9 @@ describe('DataService', () => {
     service.getDailyConsumptionData(date).subscribe();
 
     // Expect that there is exactly one HTTP request made to the specified URL
-    const req = httpTestingController.expectOne(`${environment.apiUrl}/day-consumption-dashboard?day=${date}`);
+    const req = httpTestingController.expectOne(
+      `/api/day-consumption-dashboard?day=${date}`
+    );
 
     // Check that the HTTP request method is GET
     expect(req.request.method).toBe('GET');
